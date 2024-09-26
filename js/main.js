@@ -15,13 +15,13 @@ $('document').ready(function() {
     la animación del texto revelado (puedes utilizar cualquier tipo de carácteres). También asigno la velocidad que tendrá el efecto de las letras*/
     profesion.set({
         characters: '█▓▓ ░░>██ ▓█▓>▓ ▓<█ ░<▒░▓ █░<█ █▒> ▓░▓< ▒▓░░',
-        speed: 100
+        speed: 90
     });
 
     // Ejecuto el inicio de la animacion.
     profesion.start();
     // Establezco la duración que tendrá la animación antes de revelar el texto.
-    profesion.reveal(800);
+    profesion.reveal(860);
 
     var boton = document.getElementById('boton');
 
