@@ -1,0 +1,91 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Aclonica', sans-serif;
+
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(rgb(225, 255, 200),#7beae5);
+}
+
+.envoltura {
+    width: 370px;
+    background: rgb(255, 255, 255) 30px;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border-style: groove;
+  
+}
+
+.envoltura header {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.envoltura form {
+    margin: 35px 0 20px;
+}
+
+form .row {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+form .row label {
+    font-size: 20   px;
+    margin-bottom: 18px;
+}
+
+form :where(textarea, select,button) {
+    outline: none;
+    width:100%;
+    border:none;
+    border-radius: 5px;
+}
+form .row textarea {
+    resize: none;
+    height: 110px;
+    font-size: 15px;
+    padding: 8px 10px;
+    border:1px solid  #999;
+}
+form .row .outer {
+    height: 47px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 5px;
+    border:1px solid  #999;
+
+}
+ form .row select{
+    font-size: 14px;
+ }
+
+ form button {
+    height: 52px;
+    margin-top: 10px;
+    background:#65c494 ;
+    font-size: 19px;
+    cursor: pointer;
+    color:#ffffff;
+    
+ }
+
+ .boton28 {
+    transition: background 0.4s;
+ }
+
+ .boton28:hover{
+    background: rgb(245, 88, 103);
+
+ }
