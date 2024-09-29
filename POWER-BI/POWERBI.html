@@ -2,37 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>análisis de datos de Microsoft orientado a proporcionar visualizaciones interactivas</title>
-    <link rel="stylesheet" href="POWERBI.css">
+    <title>Análisis de datos de Microsoft orientado a proporcionar visualizaciones interactivas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aclonica&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aclonica&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Aclonica', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: radial-gradient(rgb(225, 255, 200), #7beae5);
+            padding: 20px;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 900px;
+            background: rgb(255, 255, 255);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        header {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .pdf-container {
+            width: 100%;
+            height: 500px;
+            max-width: 900px;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                padding: 15px;
+            }
+
+            header {
+                font-size: 24px;
+            }
+
+            .pdf-container {
+                height: 400px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <div class="envoltura">
-            <header>Análisis de ventas</header>
+    <div class="wrapper">
+        <header>Análisis de ventas</header>
+        <div class="video-container">
+            <video autoplay muted>
+                <source src="videos/PORYECTO1POWERBI.mp4" type="video/mp4">
+                Tu navegador no admite la reproducción de videos.
+            </video>
         </div>
-        <script src="script.js"></script>
-            <div>
-        
-        <video width="900" height="500" autoplay muted  >
-            <source src="videos/PORYECTO1POWERBI.mp4" type="video/mp4">
-            Tu navegador no admite la reproducción de videos.
-        </video>
-        </div>
-        <section>
-    </section>
-        <hr>
-        <object data="PDF_/PROYECTO1.pdf" type="application/pdf" width="900" height="500">
-            <p>Tu navegador no admite la visualización de archivos PDF. Puedes <a href="ruta_del_archivo.pdf">descargarlo aquí</a>.</p>
-          </object>
-          
-    </section>
+    </div>
     
+    <div class="wrapper pdf-container">
+        <object data="PDF_/PROYECTO1.pdf" type="application/pdf" width="100%" height="100%">
+            <p>Tu navegador no admite la visualización de archivos PDF. Puedes <a href="PDF_/PROYECTO1.pdf">descargarlo aquí</a>.</p>
+        </object>
+    </div>
 
+    <script src="script.js"></script>
 </body>
-
 </html>
