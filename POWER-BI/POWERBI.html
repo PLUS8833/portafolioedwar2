@@ -38,6 +38,13 @@
             font-weight: 500;
             margin-bottom: 20px;
         }
+        .video-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            margin-top: 25px;
+        }
         .video-container {
             position: relative;
             width: 100%;
@@ -60,8 +67,8 @@
             .wrapper {
                 padding: 15px;
             }
-            header {
-                font-size: 24px;
+            header, .video-title {
+                font-size: 22px;
             }
             .pdf-container {
                 height: 400px;
@@ -72,17 +79,17 @@
 <body>
     <div class="wrapper">
         <header>Reporte de producción y devoluciones</header>
-        <!-- Nuevo video ahora primero -->
+        <!-- Primer video -->
         <div class="video-container">
-            <video autoplay muted>
+            <video autoplay muted loop>
                 <source src="videos/powerbi.mp4" type="video/mp4">
                 Tu navegador no admite la reproducción de videos.
             </video>
         </div>
-         <header>👇⬇️Informe de ventas⬇️👇</header>
-        <!-- Video original ahora segundo -->
+        <h2 class="video-title">👇⬇️ Informe de ventas ⬇️👇</h2>
+        <!-- Segundo video -->
         <div class="video-container">
-            <video autoplay muted>
+            <video autoplay muted loop>
                 <source src="videos/PORYECTO1POWERBI.mp4" type="video/mp4">
                 Tu navegador no admite la reproducción de videos.
             </video>
