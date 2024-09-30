@@ -14,7 +14,6 @@
             box-sizing: border-box;
             font-family: 'Aclonica', sans-serif;
         }
-
         body {
             display: flex;
             flex-direction: column;
@@ -24,7 +23,6 @@
             background: radial-gradient(rgb(225, 255, 200), #7beae5);
             padding: 20px;
         }
-
         .wrapper {
             width: 100%;
             max-width: 900px;
@@ -34,20 +32,18 @@
             border: 1px solid #ccc;
             margin-bottom: 20px;
         }
-
         header {
             text-align: center;
             font-size: 28px;
             font-weight: 500;
             margin-bottom: 20px;
         }
-
         .video-container {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin-bottom: 20px; /* Espacio entre videos */
         }
-
         .video-container video {
             position: absolute;
             top: 0;
@@ -55,22 +51,18 @@
             width: 100%;
             height: 100%;
         }
-
         .pdf-container {
             width: 100%;
             height: 500px;
             max-width: 900px;
         }
-
         @media (max-width: 768px) {
             .wrapper {
                 padding: 15px;
             }
-
             header {
                 font-size: 24px;
             }
-
             .pdf-container {
                 height: 400px;
             }
@@ -79,10 +71,18 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>Análisis de ventas</header>
+        <header>Reporte de producción y devoluciones</header>
         <div class="video-container">
             <video autoplay muted>
                 <source src="videos/PORYECTO1POWERBI.mp4" type="video/mp4">
+                Tu navegador no admite la reproducción de videos.
+            </video>
+        </div>
+        
+        <!-- Nuevo video -->
+        <div class="video-container">
+            <video autoplay muted>
+                <source src="videos/powerbi.mp4" type="video/mp4">
                 Tu navegador no admite la reproducción de videos.
             </video>
         </div>
@@ -93,7 +93,6 @@
             <p>Tu navegador no admite la visualización de archivos PDF. Puedes <a href="PDF_/PROYECTO1.pdf">descargarlo aquí</a>.</p>
         </object>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
