@@ -657,9 +657,8 @@ p {
     border-style: double;
     border-color: #070707;
     border-radius: 4cm;
-     max-width: 170px;    /* ← CAMBIO AQUÍ */
-    width: 100%;         /* ← CAMBIO AQUÍ */
-    height: auto;        /* ← CAMBIO AQUÍ */
+    width: 170px;
+    height: 250px;
     padding: 10px;
     margin: 10px;
     position: relative;
