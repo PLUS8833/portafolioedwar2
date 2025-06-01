@@ -651,27 +651,50 @@ p {
 
 
 /* imagen  */
-
 .foto2 {
     float: left;
     border-style: double;
     border-color: #070707;
     border-radius: 4cm;
-     max-width: 170px;    /* ← CAMBIO AQUÍ */
-    width: 100%;         /* ← CAMBIO AQUÍ */
-    height: auto;        /* ← CAMBIO AQUÍ */
+    max-width: 170px;    /* Tamaño máximo */
+    width: 100%;         /* Se adapta al contenedor */
+    height: auto;        /* Altura automática para mantener proporción */
     padding: 10px;
     margin: 10px;
     position: relative;
     top: 200px;
     left: 25px;
+    object-fit: cover;   /* Mantiene proporciones */
 }
+
 .foto{
-    cursor:pointer;
+    cursor: pointer;
     transition: transform 0.5s;
 }
+
 .foto:hover{
     transform: translateY(-15px);
+}
+
+/* Media queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .foto2 {
+        max-width: 120px;    /* Más pequeña en tablets */
+        top: 100px;          /* Reduce el desplazamiento vertical */
+        left: 15px;          /* Reduce el desplazamiento horizontal */
+        margin: 5px;         /* Reduce márgenes */
+        padding: 5px;        /* Reduce padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .foto2 {
+        max-width: 100px;    /* Aún más pequeña en móviles */
+        top: 50px;           /* Menor desplazamiento vertical */
+        left: 10px;          /* Menor desplazamiento horizontal */
+        margin: 5px;
+        padding: 5px;
+    }
 }
 
 #tagline{
