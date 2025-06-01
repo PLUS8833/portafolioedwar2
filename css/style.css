@@ -651,70 +651,29 @@ p {
 
 
 /* imagen  */
-/* REEMPLAZA COMPLETAMENTE la clase .foto2 con esta versión */
 
 .foto2 {
+    float: left;
     border-style: double;
     border-color: #070707;
     border-radius: 4cm;
-    width: 170px;           /* Tamaño fijo en desktop */
-    height: 250px;          /* Altura fija en desktop */
+     max-width: 170px;    /* ← CAMBIO AQUÍ */
+    width: 100%;         /* ← CAMBIO AQUÍ */
+    height: auto;        /* ← CAMBIO AQUÍ */
     padding: 10px;
     margin: 10px;
-    position: absolute;     /* Cambio de relative a absolute */
+    position: relative;
     top: 200px;
     left: 25px;
-    object-fit: cover;
-    z-index: 2;
 }
-
 .foto{
-    cursor: pointer;
+    cursor:pointer;
     transition: transform 0.5s;
 }
-
 .foto:hover{
     transform: translateY(-15px);
-}
-
-/* MEDIA QUERIES MÁS AGRESIVOS PARA MÓVILES */
-
-/* Para tablets y pantallas medianas */
-@media screen and (max-width: 768px) {
-    .foto2 {
-        width: 100px !important;      /* !important para forzar el cambio */
-        height: 140px !important;
-        top: 80px !important;
-        left: 10px !important;
-        margin: 5px !important;
-        padding: 5px !important;
-    }
-}
-
-/* Para móviles pequeños */
-@media screen and (max-width: 480px) {
-    .foto2 {
-        width: 80px !important;       /* Aún más pequeño */
-        height: 110px !important;
-        top: 50px !important;
-        left: 5px !important;
-        margin: 3px !important;
-        padding: 3px !important;
-    }
-}
-
-/* Para móviles muy pequeños */
-@media screen and (max-width: 360px) {
-    .foto2 {
-        width: 70px !important;
-        height: 100px !important;
-        top: 30px !important;
-        left: 5px !important;
-    }
 }
 
 #tagline{
     color: #fff;
 }
-
-
