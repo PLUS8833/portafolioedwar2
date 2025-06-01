@@ -651,20 +651,21 @@ p {
 
 
 /* imagen  */
+/* REEMPLAZA COMPLETAMENTE la clase .foto2 con esta versión */
+
 .foto2 {
-    float: left;
     border-style: double;
     border-color: #070707;
     border-radius: 4cm;
-    max-width: 170px;    /* Tamaño máximo */
-    width: 100%;         /* Se adapta al contenedor */
-    height: auto;        /* Altura automática para mantener proporción */
+    width: 170px;           /* Tamaño fijo en desktop */
+    height: 250px;          /* Altura fija en desktop */
     padding: 10px;
     margin: 10px;
-    position: relative;
+    position: absolute;     /* Cambio de relative a absolute */
     top: 200px;
     left: 25px;
-    object-fit: cover;   /* Mantiene proporciones */
+    object-fit: cover;
+    z-index: 2;
 }
 
 .foto{
@@ -676,27 +677,74 @@ p {
     transform: translateY(-15px);
 }
 
-/* Media queries para dispositivos móviles */
+/* MEDIA QUERIES MÁS AGRESIVOS PARA MÓVILES */
+
+/* Para tablets y pantallas medianas */
 @media screen and (max-width: 768px) {
     .foto2 {
-        max-width: 120px;    /* Más pequeña en tablets */
-        top: 100px;          /* Reduce el desplazamiento vertical */
-        left: 15px;          /* Reduce el desplazamiento horizontal */
-        margin: 5px;         /* Reduce márgenes */
-        padding: 5px;        /* Reduce padding */
+        width: 100px !important;      /* !important para forzar el cambio */
+        height: 140px !important;
+        top: 80px !important;
+        left: 10px !important;
+        margin: 5px !important;
+        padding: 5px !important;
     }
 }
 
+/* Para móviles pequeños */
 @media screen and (max-width: 480px) {
     .foto2 {
-        max-width: 100px;    /* Aún más pequeña en móviles */
-        top: 50px;           /* Menor desplazamiento vertical */
-        left: 10px;          /* Menor desplazamiento horizontal */
-        margin: 5px;
-        padding: 5px;
+        width: 80px !important;       /* Aún más pequeño */
+        height: 110px !important;
+        top: 50px !important;
+        left: 5px !important;
+        margin: 3px !important;
+        padding: 3px !important;
+    }
+}
+
+/* Para móviles muy pequeños */
+@media screen and (max-width: 360px) {
+    .foto2 {
+        width: 70px !important;
+        height: 100px !important;
+        top: 30px !important;
+        left: 5px !important;
     }
 }
 
 #tagline{
     color: #fff;
 }
+
+/* SOLUCIÓN ALTERNATIVA: Si el problema persiste, usa esta versión moderna */
+
+/*
+.foto2 {
+    border-style: double;
+    border-color: #070707;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    padding: 10px;
+    margin: 10px 0;
+    object-fit: cover;
+    display: block;
+    max-width: 90vw;
+}
+
+@media screen and (max-width: 768px) {
+    .foto2 {
+        width: 100px;
+        height: 100px;
+        margin: 5px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .foto2 {
+        width: 80px;
+        height: 80px;
+    }
+}
+*/
